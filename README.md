@@ -1,4 +1,4 @@
-puppetsrv
+Puppetconfig
 =========
 
-Test Puppet
+Configurazione nodi con puppet
