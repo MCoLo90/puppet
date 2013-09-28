@@ -6,7 +6,7 @@
   ensure => 'present',
 }
 
-include nginx, users, ssh, sudoers, ntp, nagios-nrpe
+include users, ssh, sudoers, ntp, nagios-nrpe
 
 $nagios_server = ['212.29.129.12']
 $nagios_real = $nagios_server
