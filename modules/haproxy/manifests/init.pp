@@ -14,5 +14,12 @@ file { '/etc/haproxy/haproxy.cfg':
  notify => Service['haproxy'],
  require => Package['haproxy']
 }
+
+file { '/etc/default/haproxy':
+ source => 'puppet:///modules/haproxy/haproxy',
+ notify => Service['haproxy'],
+ require => Package['haproxy']
+}
+
 }
 
