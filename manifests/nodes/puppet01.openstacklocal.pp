@@ -1,5 +1,5 @@
 node 'puppet01.openstacklocal' {
 
-include ngix
+include nginx
 
 }
