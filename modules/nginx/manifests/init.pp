@@ -14,5 +14,11 @@ file { '/etc/nginx/sites-enabled/default':
  notify => Service['nginx'],
  require => Package['nginx']
 }
+
+file { '/var/www':
+ ensure => "directory",
 }
 
+
+
+}
