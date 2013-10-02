@@ -6,7 +6,7 @@ cron { "puppet":
   ensure  => present,
   command => "pull-updates",
   user    => 'git',
-  minute  => "hourly",
+  interval  => "hourly",
 }
 
 }
