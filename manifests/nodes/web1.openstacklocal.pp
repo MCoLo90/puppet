@@ -6,7 +6,7 @@ $servers_real = debian
 
 cron { "puppet":
   ensure  => present,
-  command => "pull-updates",
+  command => "/usr/local/bin/pull-updates",
   user    => 'git',
   minute  => '*/5'
 }
