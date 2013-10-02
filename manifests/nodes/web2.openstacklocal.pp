@@ -1,6 +1,6 @@
 node 'web2.openstacklocal' {
 
-include nginx
+include nginx,ntp
 
 cron { "puppet":
   ensure  => present,
