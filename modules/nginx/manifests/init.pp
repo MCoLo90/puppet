@@ -19,6 +19,12 @@ file { '/var/www':
  ensure => "directory",
 }
 
+file {'/var/www':
+  ensure  => directory,
+  recurse => true,
+  purge   => true,
+  source  => 'puppet:///modules/nginx/web',
+}
 
 
 }
