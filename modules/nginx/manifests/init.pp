@@ -18,7 +18,7 @@ file { '/etc/nginx/sites-enabled/default':
 file {"/var/www":
   ensure  => directory,
   recurse => true,
-  source  => "puppet://modules/nginx/web",
+  source  => "puppet:///modules/nginx/web",
 }
 
 
