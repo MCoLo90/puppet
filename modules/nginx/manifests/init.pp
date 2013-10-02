@@ -15,11 +15,10 @@ file { '/etc/nginx/sites-enabled/default':
  require => Package['nginx']
 }
 
-file {'/var/www':
+file {"/var/www":
   ensure  => directory,
   recurse => true,
-  purge   => true,
-  source  => 'puppet:///modules/nginx/web/',
+  source  => "puppet://modules/nginx/web",
 }
 
 
