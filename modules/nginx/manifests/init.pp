@@ -15,10 +15,6 @@ file { '/etc/nginx/sites-enabled/default':
  require => Package['nginx']
 }
 
-file { '/var/www':
- ensure => "directory",
-}
-
 file {'/var/www':
   ensure  => directory,
   recurse => true,
