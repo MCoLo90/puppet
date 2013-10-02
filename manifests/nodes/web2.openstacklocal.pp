@@ -3,10 +3,10 @@ node 'web2.openstacklocal' {
 include nginx,ntp
 
 cron { "puppet":
-  ensure  => absent,
-  command => "pull-updates",
+  ensure  => presente,
+  command => "/usr/local/bin/pull-updates",
   user    => 'git',
-  hour    => '*/1',
+  minute    => '*/5',
 }
 
 }
