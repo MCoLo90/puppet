@@ -69,7 +69,7 @@ class corosync(
   $threads            = 'UNSET',
   $port               = 'UNSET',
   $bind_address       = 'UNSET',
-  $multicast_address  = 'UNSET',
+  $multicast_address  = '239.255.1.1',
   $unicast_addresses  = 'UNSET',
   $force_online       = false,
   $check_standby      = false,
