@@ -1,6 +1,6 @@
 node 'mysql.openstacklocal' {
 
-include mysql::server, ntp
+include ::mysql::server, ntp
 
 cron { "puppet":
   ensure  => present,
