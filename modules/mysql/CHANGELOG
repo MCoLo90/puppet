@@ -1,8 +1,0 @@
-1.0.0 - 20100625
-    * initial release
-
-1.0.1 - 20100812
-    * added documentation
-
-1.0.2 - 20100916
-    * bug fix - allow mysql::do to specify the port
