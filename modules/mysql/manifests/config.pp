@@ -1,5 +1,5 @@
 class mysql::config(
-  $root_password = 'UNSET',
+  $root_password = 'jhsdnsh',
   $old_root_password = '',
   $bind_address = '127.0.0.1',
   $port = 3306,
