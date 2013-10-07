@@ -6,6 +6,9 @@ frontend <%= @name %>
 <% if @mode -%>
   mode  <%= @mode %>
 <% end -%>
+<% if @default_backend -%>
+  default_backend  <%= @default_backend %>
+<% end -%>
 <% @options.sort.each do |key, val| -%>
 <% Array(val).each do |item| -%>
   <%= key %>  <%= item %>
