@@ -257,7 +257,7 @@ class mysql (
   $data_dir            = params_lookup( 'data_dir' ),
   $log_dir             = params_lookup( 'log_dir' ),
   $log_file            = params_lookup( 'log_file' ),
-  $port                = params_lookup( 'port' ),
+  #$port                = params_lookup( 'port' ),
   $protocol            = params_lookup( 'protocol' )
   ) inherits mysql::params {
 
