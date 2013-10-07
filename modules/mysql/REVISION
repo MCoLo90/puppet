@@ -1,4 +1,0 @@
-module: rcoleman/mysql
-version: 0.0.1
-url: file:///var/lib/puppet/puppet-module/cache/http_forge_puppetlabs_com-75a31f1d6f1ef6eb63b4479b3512ee1508209a7f/rcoleman-mysql-0.0.1.tar.gz
-installed: Mon Oct 07 14:51:32 +0200 2013
