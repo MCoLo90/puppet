@@ -1,44 +1,127 @@
 {
-  "name": "example42-mysql",
-  "version": "2.1.0",
-  "source": "https://github.com/example42/puppet-mysql",
-  "author": "Alessandro Franceschi",
-  "license": "Apache2",
-  "summary": "Puppet module for mysql",
-  "description": "This module installs and manages mysql. Check README.rdoc for details. Puppi is required for some common functions: you can install them without using the whole module. Monitor and firewall dependencies are needed only if the relevant features are enabled",
-  "project_page": "http://www.example42.com",
   "dependencies": [
-    {
-      "name": "example42/puppi",
-      "version_requirement": ">=2.0.0"
-    }
-  ],
-  "types": [
 
   ],
+  "name": "DavidSchmitt-mysql",
+  "author": "",
+  "license": "",
+  "version": "1.1.0",
   "checksums": {
-    "Modulefile": "b4e0005e512e5403d82dc7730e572ece",
-    "README.md": "0950e0a8a39a5962150f92ce6fcb6654",
-    "Rakefile": "f6c685620eb850c579e290caeb550255",
-    "manifests/augeas.pp": "df1d3a71c81550a282a149393f5cc36a",
-    "manifests/client.pp": "28382845244efa10d09108ce737100c3",
-    "manifests/grant.pp": "bb19a23f1bbc21a2c18822a7fe486fc3",
-    "manifests/init.pp": "d44b69afc92e0273ffb3985a6ab0a03f",
-    "manifests/params.pp": "3df657fd436014388c26bbd1b8987541",
-    "manifests/password.pp": "0f07074da47057cba9fe24a9658110db",
-    "manifests/query.pp": "e18fcbeb1ca235b668783b26c448168a",
-    "manifests/queryfile.pp": "0defd6bb516e7574d566ae6dfdc1e432",
-    "manifests/spec.pp": "7ceeebf0b8ad912eab2ab922b87cb9b7",
-    "manifests/user.pp": "b2587c2f9660b92a831f5b919476b9a8",
-    "spec/classes/mysql_spec.rb": "a71001f5f0a9a8760141cf51a9d0ae3a",
-    "spec/defines/grant_spec.rb": "c1385b1e4f627089c3a9a7659334e096",
-    "spec/spec.opts": "87c92e0bb6615f5f0b245ffe95dcca38",
-    "spec/spec_helper.rb": "0db89c9a486df193c0e40095422e19dc",
-    "templates/grant.erb": "b1a37e1530b253d65e4a8f0b1cf02ad3",
-    "templates/query.erb": "bf2381579c2c39f6c23bc97704169631",
-    "templates/root.my.cnf.backup.erb": "75c49c6f6922c9d71db19f7c7f68e680",
-    "templates/root.my.cnf.erb": "8f02e9344200c6346c21a08f6c36d857",
-    "templates/spec.erb": "055d4f22a02a677753cf922108b6e50c",
-    "templates/user.erb": "861e5463b945ba7e4257841214cdab22"
-  }
+    "tests/run_tests": "07468f2bcee9f46a38b7b0ae2f5ea5ed",
+    "tests/100_create_user_grant.pp": "e5cd5789cc118a8930fbd66d838950e2",
+    "tests/151_remove_db_privilege.pp": "1eeda57007b1770e86d9bc64c59d0d01",
+    "tests/154_mix_db_grants.pp": "87cf5a73b44b7e3f38fd9b7e01ca1dfa",
+    "tests/999_remove_database.pp": "fd3fc017c1dd0f8c8ca5d9fb79ad6967",
+    "tests/001_create_database.pp": "3be23889850f717a701875768899b4a6",
+    "tests/102_add_user_privilege.pp": "947997398c037e74f99390ce7e993f21",
+    "tests/997_remove_user_grant.pp": "6cb54ed5097bbec521efabc01f55d4cb",
+    "tests/152_add_db_privilege.pp": "a8cbc17e22cb5124ff7bc9c9c0864c83",
+    "lib/puppet/type/mysql_database.rb": "20cfcdd6bcf752949b369786898fd1f5",
+    "lib/puppet/provider/mysql_user/mysql.rb": "9af72687289b2b423be200bf9b7ba888",
+    "tests/012_change_password.pp": "e3547b037c5934065880e7805cfc250b",
+    "lib/puppet/type/mysql_grant.rb": "419cf15b0e7cc932c11ab5b92ece3881",
+    "tests/201_give_all_db_privs.pp": "aa207632d9b8b1066423f91bda85c3b1",
+    "README": "890d23791a949e9646872c3f9ceef812",
+    "tests/101_remove_user_privilege.pp": "051f4e5403604d9bf43bb9cd7e777e19",
+    "tests/200_give_all_user_privs.pp": "e163c466481e226fb3da2d1cd9ecd662",
+    "tests/996_remove_db_grant.pp": "9d604316e0f2fd0102dabccaa9fc0fd7",
+    "lib/puppet/type/mysql_user.rb": "b27f26f00077e5fd534e6c3cda3056bf",
+    "lib/puppet/provider/mysql_grant/mysql.rb": "354efd40038091f31028b9aa1473e93c",
+    "tests/103_change_user_grant.pp": "d451472bd3e8eecf6d7d9daca5b22136",
+    "lib/puppet/provider/mysql_database/mysql.rb": "255060e6886bab66cc196e762ddaf80a",
+    "tests/153_change_db_priv.pp": "7cbc9b70c6d9c604d798898d519484ec",
+    "tests/010_create_user.pp": "0dd393348c7bd9ff345034fb0175e8ba",
+    "tests/150_create_db_grant.pp": "d9c27c79be6b05de5cd846f9c9c6bd6f",
+    "tests/README": "31755ea3d754c0745f355418767955d1",
+    "tests/998_remove_user.pp": "3f274a2bda23d52e14f0a544101651d7",
+    "lib/puppet/parser/functions/mysql_password.rb": "08aaa14cfbe99ceac1b59053685ee4c0",
+    "manifests/init.pp": "edcab202299d9614c98c5f9cfdc49490",
+    "Modulefile": "1324a149c03c868592a0974ccefa7519",
+    "tests/104_mix_user_grants.pp": "66a6f9dfdb8adea2e8da7d34a3b71f31"
+  },
+  "types": [
+    {
+      "name": "mysql_database",
+      "doc": "Manage a database.",
+      "parameters": [
+        {
+          "name": "name",
+          "doc": "The name of the database."
+        },
+        {
+          "name": "defaults",
+          "doc": "A my.cnf file containing defaults to connect to the DB server"
+        }
+      ],
+      "providers": [
+        {
+          "name": "mysql",
+          "doc": "Use mysql as database.  Required binaries: ``/usr/bin/mysql``, ``/usr/bin/mysqladmin``.    "
+        }
+      ],
+      "properties": [
+        {
+          "name": "ensure",
+          "doc": "The basic property that the resource should be in.  Valid values are ``present``, ``absent``."
+        }
+      ]
+    },
+    {
+      "name": "mysql_user",
+      "doc": "Manage a database user.",
+      "parameters": [
+        {
+          "name": "name",
+          "doc": "The name of the user. This uses the 'username@hostname' form."
+        },
+        {
+          "name": "defaults",
+          "doc": "A my.cnf file containing defaults to connect to the DB server"
+        }
+      ],
+      "providers": [
+        {
+          "name": "mysql",
+          "doc": "Use mysql as database.  Required binaries: ``/usr/bin/mysql``, ``/usr/bin/mysqladmin``.    "
+        }
+      ],
+      "properties": [
+        {
+          "name": "ensure",
+          "doc": "The basic property that the resource should be in.  Valid values are ``present``, ``absent``."
+        },
+        {
+          "name": "password_hash",
+          "doc": "The password hash of the user. Use mysql_password() for creating such a hash."
+        }
+      ]
+    },
+    {
+      "name": "mysql_grant",
+      "doc": "Manage a database user's rights.",
+      "parameters": [
+        {
+          "name": "name",
+          "doc": "The primary key: either user@host for global privilges or user@host/database for database specific privileges"
+        },
+        {
+          "name": "defaults",
+          "doc": "A my.cnf file containing defaults to connect to the DB server"
+        }
+      ],
+      "providers": [
+        {
+          "name": "mysql",
+          "doc": "Uses mysql as database.  Required binaries: ``/usr/bin/mysql``, ``/usr/bin/mysqladmin``.    "
+        }
+      ],
+      "properties": [
+        {
+          "name": "privileges",
+          "doc": "The privileges the user should have. The possible values are implementation dependent."
+        }
+      ]
+    }
+  ],
+  "source": ""
 }
