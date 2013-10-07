@@ -1,0 +1,4 @@
+module: ploperations/puppetlabs_apt
+version: 0.0.3
+url: file:///var/lib/puppet/puppet-module/cache/http_forge_puppetlabs_com-75a31f1d6f1ef6eb63b4479b3512ee1508209a7f/ploperations-puppetlabs_apt-0.0.3.tar.gz
+installed: Mon Oct 07 15:22:15 +0200 2013
