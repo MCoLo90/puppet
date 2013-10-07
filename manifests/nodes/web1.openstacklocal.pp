@@ -1,6 +1,6 @@
 node 'web1.openstacklocal' {
 
-include nginx, ntp, corosync
+include nginx,ntp
 
 $servers_real = debian
 
