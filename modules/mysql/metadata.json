@@ -1,0 +1,140 @@
+{
+  "project_page": "http://github.com/puppetlabs/puppetlabs-mysql",
+  "author": "PuppetLabs",
+  "checksums": {
+    "manifests/ruby.pp": "7b57a3321f90c455bccea9de1d57149a",
+    "manifests/python.pp": "743e5ce2255afa9113a82c5e7fee3740",
+    "manifests/params.pp": "16c6328df35cc5c5a52686f231757a6a",
+    "lib/puppet/provider/database_grant/default.rb": "38a9c5fe0fe1b8474cc2bfd475a225f1",
+    "lib/puppet/type/database_user.rb": "7ce6d96bfba9825bf295fc7b54893343",
+    "tests/mysql_user.pp": "7b9ebf46d48bf156d167d586d8980249",
+    "templates/my.cnf.erb": "7ada0c5ca38c6090e982b06cee59a7d6",
+    "manifests/server.pp": "870e294ec504bde5174c203747312f8a",
+    "lib/puppet/type/database.rb": "f6ca3a0d053c06752fec999a33c1f5a0",
+    "CHANGELOG": "f2e3e57948da2dcab3bdbe782efd6b11",
+    "templates/my.cnf.pass.erb": "a4952e72bb8aea85a07274c2c1c0334f",
+    "manifests/server/mysqltuner.pp": "68951b161e11dfce8d93b202d7937704",
+    "manifests/server/monitor.pp": "76bb559e957086f6bd97ed286f15fd0c",
+    "LICENSE": "0e5ccf641e613489e66aa98271dbe798",
+    "README": "33f2ef98ed5732170ea12de2598342a5",
+    "manifests/config.pp": "d02d4e3e44c3e7fd4d28d6253e807250",
+    "lib/puppet/provider/database/mysql.rb": "92bd9124898e9a6258b585085034af4e",
+    "tests/python.pp": "b093828acfed9c14e25ebdd60d90c282",
+    "lib/puppet/type/database_grant.rb": "d1b41c45e9c18262310b55170b364c75",
+    "lib/puppet/provider/database/default.rb": "2f4d021abda21e363604403b0e0be231",
+    "files/mysqltuner.pl": "de535154b7fb28e437ba412434ea535e",
+    "tests/init.pp": "6b34827ac4731829c8a117f0b3fb8167",
+    "manifests/db.pp": "556b237e9239da0d56645c647393350a",
+    "TODO": "88ca4024a37992b46c34cb46e4ac39e6",
+    "tests/ruby.pp": "6c5071fcaf731995c9b8e31e00eaffa0",
+    "tests/mysql_database.pp": "2c611d35a1fabe5c418a917391dccade",
+    "lib/puppet/provider/database_grant/mysql.rb": "43cccef7eaf04b5cf343d2aff9147b99",
+    "tests/server.pp": "afa67b373af325b705b49239c7e2efcf",
+    "tests/mysql_grant.pp": "106e1671b1f68701778401e4a3fc8d05",
+    "lib/puppet/provider/database_user/mysql.rb": "5433dbcc8b596d6a141d0ee31e590f3e",
+    "Modulefile": "d20e82242257d951566747f78d0c2df7",
+    "manifests/init.pp": "ed5175393dfa7da87e75a5f1ebfa21ef",
+    "lib/puppet/provider/database_user/default.rb": "31cc564c11b58a23ab694ed17143f70f",
+    "lib/puppet/parser/functions/mysql_password.rb": "08aaa14cfbe99ceac1b59053685ee4c0"
+  },
+  "dependencies": [
+    {
+      "version_requirement": ">= 1.2.0",
+      "name": "puppetlasb/create_resources"
+    }
+  ],
+  "license": "Apache",
+  "summary": "Mysql module",
+  "description": "Mysql module",
+  "source": "git://github.com/puppetlabs/puppetlabs-mysql.git",
+  "version": "0.0.1",
+  "name": "puppetlabs-mysql",
+  "types": [
+    {
+      "providers": [
+        {
+          "name": "default",
+          "doc": "This is a default provider that does nothing. This allows us to install mysql on the same puppet run where we want to use it.    "
+        },
+        {
+          "name": "mysql",
+          "doc": "Create mysql database.  Required binaries: `mysql`, `mysqladmin`, `mysqlshow`.    Default for `kernel` == `Linux`.  "
+        }
+      ],
+      "properties": [
+        {
+          "name": "ensure",
+          "doc": "The basic property that the resource should be in.  Valid values are `present`, `absent`."
+        },
+        {
+          "name": "charset",
+          "doc": "The characterset to use for a database  Values can match `/^\\S+$/`."
+        }
+      ],
+      "parameters": [
+        {
+          "name": "name",
+          "doc": "The name of the database."
+        }
+      ],
+      "name": "database",
+      "doc": "Manage creation/deletion of a database."
+    },
+    {
+      "providers": [
+        {
+          "name": "default",
+          "doc": "Uses mysql as database.    "
+        },
+        {
+          "name": "mysql",
+          "doc": "Uses mysql as database.  Required binaries: `mysql`, `mysqladmin`.    Default for `kernel` == `Linux`.  "
+        }
+      ],
+      "properties": [
+        {
+          "name": "privileges",
+          "doc": "The privileges the user should have. The possible values are implementation dependent."
+        }
+      ],
+      "parameters": [
+        {
+          "name": "name",
+          "doc": "The primary key: either user@host for global privilges or user@host/database for database specific privileges"
+        }
+      ],
+      "name": "database_grant",
+      "doc": "Manage a database user's rights."
+    },
+    {
+      "providers": [
+        {
+          "name": "default",
+          "doc": "manage users for a mysql database.    "
+        },
+        {
+          "name": "mysql",
+          "doc": "manage users for a mysql database.  Required binaries: `mysql`, `mysqladmin`.    Default for `kernel` == `Linux`.  "
+        }
+      ],
+      "properties": [
+        {
+          "name": "ensure",
+          "doc": "The basic property that the resource should be in.  Valid values are `present`, `absent`."
+        },
+        {
+          "name": "password_hash",
+          "doc": "The password hash of the user. Use mysql_password() for creating such a hash.  Values can match `/\\w+/`."
+        }
+      ],
+      "parameters": [
+        {
+          "name": "name",
+          "doc": "The name of the user. This uses the 'username@hostname' or username@hosname."
+        }
+      ],
+      "name": "database_user",
+      "doc": "Manage a database user. This includes management of users password as well as priveleges"
+    }
+  ]
+}
