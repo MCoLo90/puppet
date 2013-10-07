@@ -11,4 +11,15 @@ cron { "puppet":
   minute  => '*/5'
 }
 
+haproxy::backend { 'web1':
+    options   => {
+      'option'  => [
+        'tcplog',
+        'ssl-hello-chk'
+      ],
+      'balance' => 'roundrobin'
+    },
+  }
+
+
 }

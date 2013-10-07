@@ -74,14 +74,4 @@ define haproxy::backend (
   # else: the resources have been created and they introduced their
   # concat fragments. We don't have to do anything about them.
 
-haproxy::backend { 'web1':
-    options   => {
-      'option'  => [
-        'tcplog',
-        'ssl-hello-chk'
-      ],
-      'balance' => 'roundrobin'
-    },
-  }
-
 }

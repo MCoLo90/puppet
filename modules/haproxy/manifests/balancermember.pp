@@ -102,4 +102,14 @@ define haproxy::balancermember (
     target  => '/etc/haproxy/haproxy.cfg',
     content => template('haproxy/haproxy_balancermember.erb'),
   }
+
+haproxy::balancermember { 'haproxy':
+    listening_service => 'web-test',
+    ports             => '80',
+    server_names      => ['web1', 'web2'],
+    ipaddresses       => ['192.168.170.5', '192.168.170.6'],
+    options           => 'check',
+  }
+
+
 }
