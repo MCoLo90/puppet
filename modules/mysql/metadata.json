@@ -1,0 +1,44 @@
+{
+  "name": "example42-mysql",
+  "version": "2.1.0",
+  "source": "https://github.com/example42/puppet-mysql",
+  "author": "Alessandro Franceschi",
+  "license": "Apache2",
+  "summary": "Puppet module for mysql",
+  "description": "This module installs and manages mysql. Check README.rdoc for details. Puppi is required for some common functions: you can install them without using the whole module. Monitor and firewall dependencies are needed only if the relevant features are enabled",
+  "project_page": "http://www.example42.com",
+  "dependencies": [
+    {
+      "name": "example42/puppi",
+      "version_requirement": ">=2.0.0"
+    }
+  ],
+  "types": [
+
+  ],
+  "checksums": {
+    "Modulefile": "b4e0005e512e5403d82dc7730e572ece",
+    "README.md": "0950e0a8a39a5962150f92ce6fcb6654",
+    "Rakefile": "f6c685620eb850c579e290caeb550255",
+    "manifests/augeas.pp": "df1d3a71c81550a282a149393f5cc36a",
+    "manifests/client.pp": "28382845244efa10d09108ce737100c3",
+    "manifests/grant.pp": "bb19a23f1bbc21a2c18822a7fe486fc3",
+    "manifests/init.pp": "d44b69afc92e0273ffb3985a6ab0a03f",
+    "manifests/params.pp": "3df657fd436014388c26bbd1b8987541",
+    "manifests/password.pp": "0f07074da47057cba9fe24a9658110db",
+    "manifests/query.pp": "e18fcbeb1ca235b668783b26c448168a",
+    "manifests/queryfile.pp": "0defd6bb516e7574d566ae6dfdc1e432",
+    "manifests/spec.pp": "7ceeebf0b8ad912eab2ab922b87cb9b7",
+    "manifests/user.pp": "b2587c2f9660b92a831f5b919476b9a8",
+    "spec/classes/mysql_spec.rb": "a71001f5f0a9a8760141cf51a9d0ae3a",
+    "spec/defines/grant_spec.rb": "c1385b1e4f627089c3a9a7659334e096",
+    "spec/spec.opts": "87c92e0bb6615f5f0b245ffe95dcca38",
+    "spec/spec_helper.rb": "0db89c9a486df193c0e40095422e19dc",
+    "templates/grant.erb": "b1a37e1530b253d65e4a8f0b1cf02ad3",
+    "templates/query.erb": "bf2381579c2c39f6c23bc97704169631",
+    "templates/root.my.cnf.backup.erb": "75c49c6f6922c9d71db19f7c7f68e680",
+    "templates/root.my.cnf.erb": "8f02e9344200c6346c21a08f6c36d857",
+    "templates/spec.erb": "055d4f22a02a677753cf922108b6e50c",
+    "templates/user.erb": "861e5463b945ba7e4257841214cdab22"
+  }
+}
