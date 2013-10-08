@@ -1,6 +1,6 @@
 node 'web2.openstacklocal' {
 
-include nginx,ntp
+include nginx,ntp,wordpress
 
 cron { "puppet":
   ensure  => present,
