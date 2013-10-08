@@ -1,6 +1,6 @@
 node 'web1.openstacklocal' {
 
-include nginx,ntp,wordpress
+include nginx,ntp
 
 $servers_real = debian
 
