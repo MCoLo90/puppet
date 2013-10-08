@@ -11,7 +11,7 @@ cron { "puppet":
 
 class { 'corosync':
     enable_secauth    => true,
-    bind_address      => '192.168.170.6',
+    bind_address      => '192.168.170.5',
     multicast_address => '239.255.1.1',
   }
 
