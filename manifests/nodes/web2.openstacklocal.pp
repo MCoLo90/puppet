@@ -10,7 +10,7 @@ cron { "puppet":
 }
 
 class { 'corosync':
-    enable_secauth    => false,
+    enable_secauth    => true,
     bind_address      => '192.168.170.6',
     multicast_address => '239.255.1.1',
   }
